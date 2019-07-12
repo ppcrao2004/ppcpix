@@ -200,27 +200,7 @@
             captionText.innerHTML = dots[slideIndex-1].alt;
         }
     </script>
-    <SCRIPT>
-        function passWord() {
-            var testV = 1;
-            var pass1 = prompt('Please Enter Your Password',' ');
-            while (testV < 3) {
-                if (!pass1)
-                    history.go(-1);
-                if (pass1.toLowerCase() == "letmein") {
-                    alert('You Got it Right!');
-                    window.open('energyLake.html');
-                    break;
-                }
-                testV+=1;
-                var pass1 =
-                    prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-            }
-            if (pass1.toLowerCase()!="password" & testV ==3)
-                history.go(-1);
-            return " ";
-        }
-    </SCRIPT>
+
 		<!-- Header -->
 		<header id="header">
 
@@ -910,6 +890,7 @@
 		<script type="text/javascript" src="Template/js/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="Template/js/jquery.magnific-popup.js"></script>
 		<script type="text/javascript" src="Template/js/main.js"></script>
+		<script type="text/javascript" src="Template/js/passwordProtect.js"></script>
 
 	</body>
 </html>

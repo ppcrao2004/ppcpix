@@ -30,29 +30,7 @@
 		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
-		<SCRIPT>
-			function passWord() {
-				var testV = 1;
-				var pass1 = prompt('Please Enter Your Password',' ');
-				while (testV < 3) {
-					if (!pass1)
-						history.go(-1);
-					if (pass1.toLowerCase() == "letmein") {
-						alert('You Got it Right!');
-						break;
-					}
-					testV+=1;
-					var pass1 =
-							prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-				}
-				if (pass1.toLowerCase()!="password" & testV ==3){
-                    alert('You Exceed the limit . Wrong Password');
-                    window.location = "../index.html";
-                }
 
-				return " ";
-			}
-		</SCRIPT>
     </head>
 	<body onload="passWord()">
 	<!-- Header -->
@@ -409,6 +387,7 @@
 		<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 		<script type="text/javascript" src="js/jquery.magnific-popup.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/passwordProtect.js"></script>
 
 	</body>
 </html>
