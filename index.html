@@ -200,6 +200,27 @@
             captionText.innerHTML = dots[slideIndex-1].alt;
         }
     </script>
+    <SCRIPT>
+        function passWord() {
+            var testV = 1;
+            var pass1 = prompt('Please Enter Your Password',' ');
+            while (testV < 3) {
+                if (!pass1)
+                    history.go(-1);
+                if (pass1.toLowerCase() == "letmein") {
+                    alert('You Got it Right!');
+                    window.open('energyLake.html');
+                    break;
+                }
+                testV+=1;
+                var pass1 =
+                    prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+            }
+            if (pass1.toLowerCase()!="password" & testV ==3)
+                history.go(-1);
+            return " ";
+        }
+    </SCRIPT>
 		<!-- Header -->
 		<header id="header">
 
@@ -253,7 +274,7 @@
 					<ul class="main-navbar nav navbar-nav navbar-right">
 						<li class="has-dropdown"><a class="text-link" href="#"><span>Gallery</span></a>
 							<ul class="dropdown">
-								<li><a href="Template/energyLake.html">Energy Lake</a></li>
+								<li><a href="Template/energyLake.html" onClick="passWord()">Energy Lake</a></li>
 								<li><a href="#">Travel</a></li>
 								<li><a href="#">Shoot</a></li>
 								<li><a href="#">Shoot</a></li>
