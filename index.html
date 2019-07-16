@@ -1,136 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
+<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            .row > .column {
-                padding: 0 8px;
-            }
 
-            .row:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
-
-            /* Create four equal columns that floats next to eachother */
-            .column {
-                float: left;
-                width: 25%;
-            }
-
-            /* The Modal (background) */
-            .modal {
-                display: none;
-                position: fixed;
-                z-index: 1;
-                padding-top: 100px;
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%;
-                overflow: auto;
-                background-color: black;
-            }
-
-            /* Modal Content */
-            .modal-content {
-                position: relative;
-                background-color: #fefefe;
-                margin: auto;
-                padding: 0;
-                width: 90%;
-                max-width: 1200px;
-            }
-
-            /* The Close Button */
-            .close {
-                color: white;
-                position: absolute;
-                top: 10px;
-                right: 25px;
-                font-size: 35px;
-                font-weight: bold;
-            }
-
-            .close:hover,
-            .close:focus {
-                color: #999;
-                text-decoration: none;
-                cursor: pointer;
-            }
-
-            /* Hide the slides by default */
-            .mySlides {
-                display: none;
-            }
-
-            /* Next & previous buttons */
-            .prev,
-            .next {
-                cursor: pointer;
-                position: absolute;
-                top: 50%;
-                width: auto;
-                padding: 16px;
-                margin-top: -50px;
-                color: white;
-                font-weight: bold;
-                font-size: 20px;
-                transition: 0.6s ease;
-                border-radius: 0 3px 3px 0;
-                user-select: none;
-                -webkit-user-select: none;
-            }
-
-            /* Position the "next button" to the right */
-            .next {
-                right: 0;
-                border-radius: 3px 0 0 3px;
-            }
-
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover,
-            .next:hover {
-                background-color: rgba(0, 0, 0, 0.8);
-            }
-
-            /* Number text (1/3 etc) */
-            .numbertext {
-                color: #f2f2f2;
-                font-size: 12px;
-                padding: 8px 12px;
-                position: absolute;
-                top: 0;
-            }
-
-            /* Caption text */
-            .caption-container {
-                text-align: center;
-                background-color: black;
-                padding: 2px 16px;
-                color: white;
-            }
-
-            img.demo {
-                opacity: 0.6;
-            }
-
-            .active,
-            .demo:hover {
-                opacity: 1;
-            }
-
-            img.hover-shadow {
-                transition: 0.3s;
-            }
-
-            .hover-shadow:hover {
-                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            }
-        </style>
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 		<link rel="icon" href="Template/img/ppcpixFavicon2.jpg" type="image/x-icon" />
 		<title>PPC PhotoGraphy - Capture Memories</title>
@@ -154,54 +28,10 @@
 		<!-- Custom stlylesheet -->
 		<link type="text/css" rel="stylesheet" href="Template/css/style.css"/>
 
-
-
     </head>
 	<body>
-    <script>
-        // Open the Modal
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
 
-        // Close the Modal
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        // Next/previous controls
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-            captionText.innerHTML = dots[slideIndex-1].alt;
-        }
-    </script>
-
-		<!-- Header -->
+	<!-- Header -->
 		<header id="header">
 
 			<!-- Top Header -->
@@ -268,12 +98,6 @@
 							</ul>
 						</li>
 
-						<li class="has-dropdown"><a class="text-link" href="#"><span>Blog</span></a>
-							<ul class="dropdown">
-								<li><a href="#">Blog page</a></li>
-								<li><a href="#">Blog post page</a></li>
-							</ul>
-						</li>
 						<li><a class="text-link" href="#"><span>Contact</span></a></li>
 					</ul>
 					<!-- Navigation -->
@@ -296,11 +120,16 @@
 			<div class="home-wrapper">
 				<div class="container">
 					<div class="row">
-
+						<!-- Scrolling to Wish the Visitor -->
+						<marquee class="lead" direction="right" scrollamount="5" behavior="alternate" id="lblGreetings"></marquee>
+						<!-- Scrolling Wish the Visitor -->
 						<!-- home content -->
 						<div class="col-md-10 col-md-offset-1">
 							<h1>We Capture Your Life Sweet Memories</h1>
-							<p class="lead">Photos is all about Memories to be Captures. We will add colours to your Memories</p>
+							<p class="lead">Life brings tears , smiles and memories .
+								The Tears dry ,
+								the Smile fade ,but
+							<p class="lead"> <font color="#A712F1"><b>the Memories last forever.</b></font></p></p>
 							<button class="secondary-button">Learn more</button>
 						</div>
 						<!-- /home content -->
@@ -894,6 +723,7 @@
 		<script type="text/javascript" src="Template/js/jquery.magnific-popup.js"></script>
 		<script type="text/javascript" src="Template/js/main.js"></script>
 		<script type="text/javascript" src="Template/js/passwordProtect.js"></script>
+	    <script type="text/javascript" src="Template/js/greetingsVisitor.js"></script>
 
 	</body>
 </html>
